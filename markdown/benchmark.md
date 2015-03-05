@@ -13,6 +13,10 @@ dd if=/dev/zero of=/dev/sdh1 bs=1G count=1 oflag=direct
 dd if=/dev/zero of=/dev/sdh1 bs=512 count=1000 oflag=direct
 ```
 
+Note: This is a very simple *destructive* device benchmark to run on
+your OSD. Don't do this on a device already in use as an OSD. Top:
+throughput test of writing 1GB in `O_DIRECT` mode; bottom, latency
+test of writing 1000 sectors in `O_DIRECT` mode.
 
 <iframe src="https://asciinema.org/api/asciicasts/13104?size=medium&amp;theme=solarized-light&amp;speed=2" id="asciicast-iframe-13104" name="asciicast-iframe-13104" scrolling="yes"></iframe>
 
@@ -30,6 +34,10 @@ fio --size=100m \
 	--blocksize_range=4K-512k \
 	--iodepth=1
 ```
+
+Note: Here is a more advanced *destructive* device benchmark to run on
+your OSD. Don't do this on a device already in use as an OSD. 100MB in
+sequential write, with variable block sizes, 10 times in a row.
 
 
 <iframe src="https://asciinema.org/api/asciicasts/13105?size=medium&amp;theme=solarized-light&amp;speed=2" id="asciicast-iframe-13105" name="asciicast-iframe-13105" scrolling="yes"></iframe>
