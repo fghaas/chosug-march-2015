@@ -18,7 +18,8 @@ your OSD. Don't do this on a device already in use as an OSD. Top:
 throughput test of writing 1GB in `O_DIRECT` mode; bottom, latency
 test of writing 1000 sectors in `O_DIRECT` mode.
 
-<iframe src="https://asciinema.org/api/asciicasts/13104?size=medium&amp;theme=solarized-light&amp;speed=2" id="asciicast-iframe-13104" name="asciicast-iframe-13104" scrolling="yes"></iframe>
+
+<iframe src="https://asciinema.org/api/asciicasts/13104?size=medium&amp;theme=solarized-light&amp;speed=3" id="asciicast-iframe-13104" name="asciicast-iframe-13104" scrolling="yes"></iframe>
 
 
 ## Block device benchmarks
@@ -40,7 +41,7 @@ your OSD. Don't do this on a device already in use as an OSD. 100MB in
 sequential write, with variable block sizes, 10 times in a row.
 
 
-<iframe src="https://asciinema.org/api/asciicasts/13105?size=medium&amp;theme=solarized-light&amp;speed=2" id="asciicast-iframe-13105" name="asciicast-iframe-13105" scrolling="yes"></iframe>
+<iframe src="https://asciinema.org/api/asciicasts/13105?size=medium&amp;theme=solarized-light&amp;speed=3" id="asciicast-iframe-13105" name="asciicast-iframe-13105" scrolling="yes"></iframe>
 
 
 ## Network benchmarks
@@ -55,7 +56,7 @@ ceph tell osd.X bench
 ```
 
 
-<iframe src="https://asciinema.org/api/asciicasts/13106?size=medium&amp;theme=solarized-light&amp;speed=2" id="asciicast-iframe-13106" name="asciicast-iframe-13106" scrolling="yes"></iframe>
+<iframe src="https://asciinema.org/api/asciicasts/13106?size=medium&amp;theme=solarized-light&amp;speed=3" id="asciicast-iframe-13106" name="asciicast-iframe-13106" scrolling="yes"></iframe>
 
 
 ## rados benchmark
@@ -65,13 +66,13 @@ rados bench -p bench 30 write
 Do this on a throwaway pool!
 
 
-<iframe src="https://asciinema.org/api/asciicasts/13107?size=medium&amp;theme=solarized-light&amp;speed=2" id="asciicast-iframe-13107" name="asciicast-iframe-13107" scrolling="yes"></iframe>
+<iframe src="https://asciinema.org/api/asciicasts/13107?size=medium&amp;theme=solarized-light&amp;speed=3" id="asciicast-iframe-13107" name="asciicast-iframe-13107" scrolling="yes"></iframe>
 
 
 ## fio RBD benchmarks
 ```sh
 fio --size=10G \
-	--ioengine=librbd \
+	--ioengine=rbd \
 	--invalidate=0 \
 	--direct=1 \
 	--numjobs=10 \
