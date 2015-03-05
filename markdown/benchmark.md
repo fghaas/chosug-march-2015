@@ -2,7 +2,7 @@ Ceph cluster
 # Benchmarks
 
 
-<!-- .slide: data-background="images/ceph_benchmarks_bottom_to_top.svg" data-background-size="auto 95%" -->
+<!-- .slide: data-background="images/ceph_benchmarks_bottom_to_top.svg" data-background-size="auto 95%" data-background-color="rgba(255,255,255,0.8)" -->
 
 
 ## Block device benchmarks
